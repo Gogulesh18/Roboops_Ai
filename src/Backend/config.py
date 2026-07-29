@@ -1,0 +1,2 @@
+APP_NAME = "RoboOps AI"
+VERSION = "1.0.0"
