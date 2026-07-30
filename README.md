@@ -1,219 +1,270 @@
 # 🤖 RoboOps AI
 
-> **Enterprise Multi-Agent Warehouse Robotics Operations Platform**
+> Enterprise AI-Powered Warehouse Robotics Backend Platform
 
 ![Python](https://img.shields.io/badge/Python-3.13-blue?logo=python)
-![FastAPI](https://img.shields.io/badge/FastAPI-Production-009688?logo=fastapi)
-![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)
-![Vite](https://img.shields.io/badge/Vite-Frontend-646CFF?logo=vite)
-![TailwindCSS](https://img.shields.io/badge/TailwindCSS-UI-38B2AC?logo=tailwindcss)
-![LangGraph](https://img.shields.io/badge/LangGraph-Agentic-black)
-![Gemini](https://img.shields.io/badge/Google-Gemini-blue)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi)
+![WebSocket](https://img.shields.io/badge/WebSocket-RealTime-orange)
+![AI](https://img.shields.io/badge/AI-Multi--Agent-purple)
 ![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
 ---
 
-## 🚀 Overview
+# 🚀 Overview
 
-RoboOps AI is a production-inspired **Multi-Agent Warehouse Robotics Operations Platform**
-designed to simulate autonomous warehouse robots operating in real time.
+RoboOps AI is an enterprise-inspired backend platform that simulates and manages autonomous warehouse robots using AI-driven fleet coordination, mission planning, and real-time communication.
 
-The platform combines
+The platform is designed as a scalable robotics backend capable of handling multiple robots simultaneously while providing intelligent decision support, warehouse simulation, analytics, and real-time monitoring.
 
-- Robotics Fleet Management
-- AI Decision Making
-- LLM-powered Multi-Agent Systems
-- Digital Warehouse Twin
-- Real-Time Monitoring
-- Mission Planning
-- Predictive Analytics
-
-into one enterprise-grade application.
-
-Instead of using rule-based logic for operational decisions, RoboOps AI uses specialized AI Agents orchestrated through an intelligent workflow.
+Unlike traditional rule-based fleet management systems, RoboOps AI is designed to support LLM-powered decision making through specialized AI agents for planning, supervision, traffic coordination, safety monitoring, and operational analytics.
 
 ---
 
-# 🎯 Features
+# ✨ Features
 
-## 🤖 Multi-Agent AI
+## 🤖 Fleet Management
 
-- Supervisor Agent
-- Mission Planner Agent
-- Dispatcher Agent
-- Traffic Management Agent
-- Safety Agent
-- Charging Agent
-- Fleet Manager Agent
-- Failure Recovery Agent
-- Analytics Agent
-- Reporting Agent
-- AI Operator Assistant
-
----
-
-## 🚚 Fleet Management
-
-- Real-time Robot Monitoring
-- Dynamic Mission Assignment
-- Live Robot Tracking
+- Multi-Robot Fleet Management
+- Live Robot Status Monitoring
+- Robot Registration
 - Robot Health Monitoring
-- Battery Management
+- Battery Tracking
 - Temperature Monitoring
-- Payload Tracking
-- Fleet Analytics
+- Fleet Health Score
+- Robot Availability Tracking
 
 ---
 
-## 🏭 Warehouse Digital Twin
+## 🚚 Mission Management
 
-- Interactive Warehouse Map
+- Dynamic Mission Assignment
+- Mission Queue
+- Task Scheduling
+- Task Prioritization
+- Robot Selection
+- Mission Completion Tracking
+- Mission Recovery
+- Failure Handling
+
+---
+
+## 🏭 Warehouse Simulation
+
+- Warehouse Digital Twin
+- Robot Movement Simulation
+- Location Mapping
+- Warehouse Zones
 - Charging Stations
-- Delivery Zones
-- Pickup Zones
-- Restricted Areas
-- Dynamic Obstacles
-- Traffic Congestion
-- Collision Visualization
+- Task Queue Simulation
+- Event Logging
+- Fleet Analytics
 
 ---
 
 ## 🧠 AI Decision Engine
 
-Instead of hardcoded business logic, RoboOps AI uses LLM reasoning for
-
+- Intelligent Fleet Coordination
 - Mission Planning
-- Fleet Coordination
-- Traffic Optimization
-- Incident Analysis
-- Failure Recovery
-- Predictive Maintenance
-- Performance Analysis
-- Report Generation
+- AI Supervisor
+- Fleet Analytics
+- AI Decision Service
+- AI Autopilot
+- Operational Recommendations
+- Structured Decision Pipeline
 
 ---
 
-## 📊 Analytics Dashboard
+## ⚡ Real-Time Communication
 
-- Fleet Health
+- WebSocket Manager
+- Live Robot Updates
+- Fleet Streaming
+- Event Broadcasting
+- Dashboard Integration
+- Real-Time Notifications
+
+---
+
+# 🏗️ System Architecture
+
+```
+                    Clients
+
+                       │
+
+             REST API + WebSocket
+
+                       │
+
+                FastAPI Backend
+
+                       │
+
+    ┌──────────────┬───────────────┬───────────────┐
+
+    │              │               │
+
+Fleet Engine   AI Decision Engine   Simulation Engine
+
+    │              │               │
+
+    └──────────────┴───────────────┘
+
+                       │
+
+              Warehouse State Manager
+```
+
+---
+
+# 📁 Project Structure
+
+```
+src/
+
+└── Backend/
+
+    ├── api/
+    ├── models/
+    ├── services/
+    ├── prompts/
+    ├── orchestration/
+    ├── simulation/
+    ├── websocket/
+    ├── utils/
+    ├── config/
+    └── main.py
+```
+
+---
+
+# 🧠 Core Services
+
+### Fleet Service
+
+Responsible for
+
+- Robot Management
+- Fleet Status
+- Robot Assignment
+- Availability Tracking
+
+---
+
+### Mission Planner
+
+Responsible for
+
+- Mission Allocation
+- Robot Selection
+- Queue Management
+- Scheduling
+
+---
+
+### Navigation Service
+
+Responsible for
+
+- Robot Routing
+- Path Planning
+- Destination Tracking
+
+---
+
+### Collision Service
+
+Responsible for
+
+- Collision Detection
+- Safety Monitoring
+- Conflict Resolution
+
+---
+
+### Traffic Manager
+
+Responsible for
+
+- Traffic Flow
+- Congestion Monitoring
+- Route Coordination
+
+---
+
+### Simulation Service
+
+Responsible for
+
+- Robot Movement
+- Battery Drain
+- Charging Simulation
+- Temperature Simulation
+- Event Generation
+
+---
+
+### Dashboard Service
+
+Responsible for
+
+- Fleet Summary
+- KPIs
+- Fleet Health Score
+- Live Statistics
+
+---
+
+### Analytics Service
+
+Responsible for
+
+- Fleet Analytics
 - Robot Utilization
-- Battery Trends
-- Mission Completion Rate
-- Traffic Heatmaps
-- Warehouse KPIs
-- AI Recommendations
-- Daily Reports
+- Mission Metrics
+- Performance Monitoring
 
 ---
 
-# 🏗 Architecture
+### AI Decision Service
 
-```
-                +-----------------------+
-                |    React Dashboard    |
-                +----------+------------+
-                           |
-                     WebSocket / REST
-                           |
-+------------------------------------------------------+
-|                     FastAPI Backend                  |
-+------------------------------------------------------+
-        |              |               |
-        |              |               |
-        ▼              ▼               ▼
-  Fleet Engine     AI Agents      Simulation Engine
-        |              |               |
-        ▼              ▼               ▼
-   Robot Models   LangGraph      Warehouse Twin
-        |              |               |
-        +--------------+---------------+
-                       |
-                 PostgreSQL
-                       |
-                 Vector Memory
-                    (FAISS)
-```
+Responsible for
+
+- Operational Recommendations
+- Fleet Optimization
+- Intelligent Planning
+- AI Decision Pipeline
 
 ---
 
-# 🧠 AI Workflow
-
-```
-Warehouse State
-
-        │
-
-        ▼
-
-Supervisor Agent
-
-        ▼
-
-Mission Planner
-
-        ▼
-
-Dispatcher
-
-        ▼
-
-Traffic Agent
-
-        ▼
-
-Safety Agent
-
-        ▼
-
-Mission Execution
-
-        ▼
-
-Analytics Agent
-
-        ▼
-
-Reporting Agent
-```
-
----
-
-# ⚙ Tech Stack
+# ⚙️ Tech Stack
 
 ## Backend
 
-- Python
+- Python 3.13
 - FastAPI
 - Pydantic
-- SQLAlchemy
-- PostgreSQL
 - WebSockets
-- Redis
-- Celery
+- Uvicorn
 
 ---
 
 ## AI
 
-- LangChain
-- LangGraph
 - Google Gemini
-- OpenAI Compatible APIs
-- FAISS
-- Sentence Transformers
+- Prompt Engineering
+- AI Decision Services
+- Multi-Agent Ready Architecture
 
 ---
 
-## Frontend
+## Simulation
 
-- React
-- Vite
-- TailwindCSS
-- Redux Toolkit
-- Recharts
-- React Flow
-- Framer Motion
+- Warehouse Digital Twin
+- Robot Simulation
+- Fleet Simulation
+- Mission Simulation
 
 ---
 
@@ -221,247 +272,116 @@ Reporting Agent
 
 - Docker
 - Docker Compose
-- GitHub Actions
+- Git
 
 ---
 
-# 📁 Project Structure
+# 📡 REST APIs
 
-```
-backend/
-
-├── api/
-├── agents/
-│   ├── supervisor/
-│   ├── planner/
-│   ├── dispatcher/
-│   ├── safety/
-│   ├── traffic/
-│   ├── analytics/
-│   └── reporting/
-│
-├── services/
-├── simulation/
-├── models/
-├── repositories/
-├── database/
-├── websocket/
-├── llm/
-├── prompts/
-├── orchestration/
-├── middleware/
-└── tests/
-
-frontend/
-
-├── components/
-├── pages/
-├── hooks/
-├── services/
-├── layouts/
-├── store/
-├── assets/
-└── styles/
-```
-
----
-
-# 🚀 Core Modules
-
-## Fleet Engine
-
-Responsible for
-
-- Robot Registration
-- Robot Health
-- Battery Tracking
-- Fleet Status
-- Mission Queue
-
----
-
-## Simulation Engine
-
-Responsible for
-
-- Robot Movement
-- Collision Detection
-- Traffic Simulation
-- Charging Simulation
-- Failure Simulation
-
----
-
-## AI Decision Engine
-
-Responsible for
-
-- Fleet Optimization
-- Task Assignment
-- Route Suggestions
-- Recovery Planning
-- KPI Analysis
-
----
-
-## Warehouse Digital Twin
-
-Responsible for
-
-- Live Map
-- Robot Positioning
-- Mission Visualization
-- Congestion Monitoring
-
----
-
-# 📡 API Modules
+Current API modules include
 
 - Fleet APIs
-- Robot APIs
-- Mission APIs
-- Analytics APIs
-- Reports APIs
-- AI APIs
 - Dashboard APIs
+- Robot APIs
+- Simulation APIs
 - Health APIs
-- WebSocket APIs
+- Analytics APIs
 
 ---
 
-# 📈 Dashboard
+# 🔌 WebSocket
 
-The dashboard provides
+Real-time communication endpoint
 
-- Live Fleet Monitoring
-- Warehouse Map
-- KPI Cards
-- Fleet Analytics
-- Robot Details
-- AI Recommendations
-- Mission Queue
-- Notifications
-- Shift Reports
+```
+ws://localhost:8000/ws/fleet
+```
 
----
+Streams
 
-# 🔥 AI Capabilities
-
-- Intelligent Fleet Coordination
-- Dynamic Mission Scheduling
-- Natural Language Queries
-- AI Incident Explanation
-- Predictive Maintenance
-- Fleet Optimization
-- Autonomous Recommendations
-- Warehouse Performance Insights
-
----
-
-# 🔄 Real-Time Features
-
-- WebSockets
-- Live Robot Locations
-- Mission Updates
+- Robot Status
+- Fleet Health
 - Battery Updates
-- Fleet Notifications
-- AI Decisions
-- Dashboard Streaming
+- Mission Updates
+- Analytics
+- Live Events
 
 ---
 
-# 📷 Screenshots
+# 📊 Backend Capabilities
 
-## Dashboard
-
-```
-docs/screenshots/dashboard.png
-```
-
----
-
-## Warehouse Digital Twin
-
-```
-docs/screenshots/warehouse.png
-```
-
----
-
-## Fleet Analytics
-
-```
-docs/screenshots/analytics.png
-```
-
----
-
-## AI Recommendations
-
-```
-docs/screenshots/recommendations.png
-```
+- Multi-Robot Coordination
+- Real-Time Fleet Monitoring
+- Mission Scheduling
+- Fleet Health Monitoring
+- Warehouse Simulation
+- AI Decision Support
+- Live Event Streaming
+- Digital Twin Backend
 
 ---
 
 # 🚀 Getting Started
 
-## Clone
+## Clone Repository
 
 ```bash
-git clone https://github.com/USERNAME/RoboOps_AI.git
+git clone https://github.com/Gogulesh18/Roboops_Ai.git
 ```
 
 ---
 
-## Backend
+## Create Virtual Environment
 
 ```bash
-cd backend
-
 python -m venv .venv
-
-source .venv/bin/activate
-
-pip install -r requirements.txt
-
-uvicorn main:app --reload
 ```
 
----
-
-## Frontend
+Windows
 
 ```bash
-cd frontend
+.venv\Scripts\activate
+```
 
-npm install
+Linux / macOS
 
-npm run dev
+```bash
+source .venv/bin/activate
 ```
 
 ---
 
-# 🌐 API Documentation
+## Install Dependencies
 
-```
-http://localhost:8000/docs
+```bash
+pip install -r requirements.txt
 ```
 
 ---
 
-# 📊 Future Roadmap
+## Start Server
 
-- ROS2 Integration
-- Gazebo Simulation
-- NVIDIA Isaac Sim
-- Multi-Warehouse Support
-- Voice Operator Assistant
-- Autonomous Warehouse Optimization
-- Kubernetes Deployment
-- Cloud Deployment
-- Reinforcement Learning
-- Vision-based Robot Navigation
+```bash
+uvicorn src.Backend.main:app --reload
+```
+
+---
+
+# 📖 API Documentation
+
+After starting the server
+
+Swagger UI
+
+```
+http://127.0.0.1:8000/docs
+```
+
+OpenAPI
+
+```
+http://127.0.0.1:8000/openapi.json
+```
 
 ---
 
@@ -473,21 +393,30 @@ pytest
 
 ---
 
-# 🐳 Docker
+# 📈 Roadmap
 
-```bash
-docker compose up --build
-```
+- LangGraph Integration
+- LLM-Based Multi-Agent Reasoning
+- PostgreSQL Support
+- Redis Queue
+- ROS2 Integration
+- Gazebo Integration
+- NVIDIA Isaac Sim Support
+- Kubernetes Deployment
+- Multi-Warehouse Simulation
+- Predictive Maintenance
 
 ---
 
 # 📚 Documentation
 
-- Architecture Guide
-- API Documentation
+Future documentation
+
+- System Architecture
+- API Reference
+- Sequence Diagrams
 - Deployment Guide
 - AI Agent Design
-- System Design
 - Database Schema
 
 ---
@@ -498,16 +427,22 @@ docker compose up --build
 
 Computer Science Engineer
 
-AI • Robotics • Full Stack • Generative AI
+Specializing in
+
+- Artificial Intelligence
+- Robotics Software Engineering
+- Backend Development
+- Generative AI
+- Distributed Systems
 
 ---
 
-# 📜 License
+# ⭐ Support
 
-MIT License
+If you found this project interesting, consider giving it a ⭐ on GitHub.
 
 ---
 
-# ⭐ If you found this project useful
+# 📄 License
 
-Give it a ⭐ on GitHub.
+This project is licensed under the MIT License.
